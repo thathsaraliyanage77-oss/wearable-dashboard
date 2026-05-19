@@ -28,23 +28,50 @@ st_autorefresh(interval=5000, key="refresh")
 # FIREBASE INIT
 # =========================================================
 
-if not firebase_admin._apps:
-
-    cred = credentials.Certificate("firebase_key.json")
-
-    firebase_admin.initialize_app(cred, {
-        'databaseURL': 'https://smart-wearable-mesh-default-rtdb.firebaseio.com/'
-    })
+@st.cache_resource
+def init_firebase():
+    if not firebase_admin._apps:
+        try:
+            cred = credentials.Certificate("firebase_key.json")
+            firebase_admin.initialize_app(cred, {
+                'databaseURL': 'https://smart-wearable-mesh-default-rtdb.firebaseio.com/'
+            })
+        except Exception as e:
+            st.error(f"Firebase initialization failed: {str(e)}")
+            return None
+    return True
 
 # =========================================================
 # LOAD DATA
 # =========================================================
 
-ref = db.reference("/")
-data = ref.get()
+@st.cache_data(ttl=5)
+def load_firebase_data():
+    try:
+        init_firebase()
+        ref = db.reference("/")
+        data = ref.get()
+        if data is None:
+            data = {}
+        return data
+    except Exception as e:
+        st.error(f"⚠️ Firebase Connection Failed")
+        st.info("""
+        **Error:** Invalid Firebase credentials
+        
+        **Fix:** Update your firebase_key.json file:
+        1. Go to Firebase Console → Project Settings → Service Accounts
+        2. Click "Generate New Private Key"
+        3. Replace firebase_key.json with the downloaded file
+        4. Restart the app
+        """)
+        return {
+            "Node1": {"Heartbeat": 72, "Status": "AWAKE", "Location": {"Lat": 40.7128, "Lon": -74.0060}},
+            "Node2": {"Heartbeat": 65, "Status": "SLEEP", "Location": {"Lat": 34.0522, "Lon": -118.2437}},
+            "Node3": {"Heartbeat": 80, "Status": "AWAKE", "Location": {"Lat": 41.8781, "Lon": -87.6298}}
+        }
 
-if data is None:
-    data = {}
+data = load_firebase_data()
 
 # =========================================================
 # CUSTOM CSS
@@ -313,18 +340,14 @@ for index, node in enumerate(nodes):
 
             if lat == 0 and lon == 0:
 
-                st.markdown('<div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px; background: #f9fafb;">', unsafe_allow_html=True)
                 st.info("📍 Location data unavailable for this node.")
-                st.markdown('</div>', unsafe_allow_html=True)
 
             else:
 
                 with st.expander(f"📍 View {node} Location"):
 
-                    st.markdown('<div style="border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px; background: #f9fafb;">', unsafe_allow_html=True)
                     st.write(f"Latitude : {lat}")
                     st.write(f"Longitude : {lon}")
-                    st.markdown('</div>', unsafe_allow_html=True)
 
                 # Dark Theme Map
 

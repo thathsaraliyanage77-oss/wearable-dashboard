@@ -66,9 +66,9 @@ def load_firebase_data():
         4. Restart the app
         """)
         return {
-            "Node1": {"Heartbeat": 72, "Status": "AWAKE", "Location": {"Lat": 40.7128, "Lon": -74.0060}},
-            "Node2": {"Heartbeat": 65, "Status": "SLEEP", "Location": {"Lat": 34.0522, "Lon": -118.2437}},
-            "Node3": {"Heartbeat": 80, "Status": "AWAKE", "Location": {"Lat": 41.8781, "Lon": -87.6298}}
+            "Node1": {"Heartbeat": 00, "Status": "---", "Location": {"Lat": 0.0, "Lon": 0.0}},
+            "Node2": {"Heartbeat": 00, "Status": "---", "Location": {"Lat": 0.0, "Lon": 0.0}},
+            "Node3": {"Heartbeat": 00, "Status": "---", "Location": {"Lat": 0.0, "Lon": 0.0}}
         }
 
 data = load_firebase_data()

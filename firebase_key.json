@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "smart-wearable-mesh",
+  "private_key_id": "98e17ecd92505a5c4e1334d3db620acbe9f838e1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQD1zynJqLb9/pkR\nNfgjmuPzwAxZ83TSVeW3j9mLUoGwGsbUA6YXJ2HRx/vqfPaFFHL/dSZtB28me/TC\na/dS2WIvevwXO8DV69tTtE3bcEYuaAbjJ97Os1XQP5DRgMmlpapc1lfBTzrdaeF1\nxs6dFwGOK20FOg81n8G1IsRtMjpDLx+uFqnMJPRBxjtJydyowuIUxZO+JdhMpmJ7\ne8dVAi+5x2bZ8q1HRAfl0ro7l4ePXYR4NyAYV7Dv51+/ERFkZg3QJVa7JaIcJkOa\nMTr1bT/LC11Eks8+wE0JEh7Cs+7EQXGvgSM433p5lXfbtO+ufDRljH1r8Vf/H+/P\noArNzFd7AgMBAAECggEAHX1ll4Zwscc2KOzvIKJn/6nGMZJ2LPfWL/AHmuHiojSM\nLwpjBjsYzrit3eNxFeUuqLwuyHzQVm8fnaWjTeK7l1OrY8Qs7d02enPStWViXhXn\n4Z+6aNT2Eh5WKvRG/OMDrdCfRZdSShb2UBFyX0FP0/UcxrhA899/N1J8+1a/y6hi\n9UPkwl8WbiC8+i+mxEaH2Dn34MGvngYYdC6KYzkFv+0p0DrLjRxXFS7wkSAqUQK+\nmr6Ij6sJBX/B/6BiEKhrNb5Gf0vnonS6BNVAHl1s/0XMzoBDeINAZwrSrFWPTCg/\n3pw+L4vMiTGnMbv/7/a+ZmWDOdUlAxdtwi/NBjVZcQKBgQD63Nd/nvtKAN1Ey2cV\nL9XZFDKvA1wFvldhelN1qCC7IsFjkhBnxGD26DPWKaB6i/+z+SoKP6DhAjgQCqBB\ncO9ezubg6wSHOl7gdm28JxSakPs2ZWHngXghokPfV+jHS/7Agn2hL6OvIwQo2HXz\nkv51d/HALcvC+AWE63xKKI/UcQKBgQD619QfzCwx49ELXetzIQmvCBnmBlMZErzo\n3mqkBrtckAan/LM/DR9T8uQ8F81LhZpa9NjqNchbDfmQSmXZidtlEq4dlyMLZ4Wi\nSYH8qVc/9b5LXIK+qAu5sZ7NJOFnhhSejmmB8fyLaFbJT23hnw8IAO5yLn1mhmFz\nhAWQGUhwqwKBgAtG1iEUgnNHKqsnAZFAPzqs38JiQka30bG+D/ZgAminHU5eiIJB\nn6I5uerMoDwiAvKSJsOjLJYwxVhjQeTvMLNwVYySw/dYNl+csz4b+58fGUvOruH7\nPe01IBvwFbSvw9nfg8o1HASJbGxxnou+ddXN+H4NEPXItGbPNx0WSbDhAoGBANko\nP9vHRftq3m6YwFzLHTcKLGGW2Bm8vw5afrfBnDJl/V0wx3yuP5DNlgjwEipvX1Ge\n5qrcJLevQX5I6iOJ1QWLRnEXhp8439e/C2lQsNgORs+3JvknQf9gZbnzU6/rw64A\nXBbDB38otPlSai4JJVoodEUlOiqn63W1tZsqSCxBAoGBAJODGI0PWhJzEdMiIH5l\nzjye7bcWqeDeZsHZNBqj03oVMBMgZbzfkZV67VWOyQxZAcXh6eFw4UzmMVUBLIcd\n0XRRM0fO3I5Ivf6NqhqoLGnRulS8MmuO9sEfSIOEFVennwAAdmLjQdIte2VGv/c3\n3rn0dtKtRHuFYPIynRsFcuGY\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@smart-wearable-mesh.iam.gserviceaccount.com",
+  "client_id": "109038817934244177544",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40smart-wearable-mesh.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
